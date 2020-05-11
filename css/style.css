@@ -1,0 +1,36 @@
+body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrahRkEklgag%2Fmaxresdefault.jpg&f=1&nofb=1");
+  background-size: auto 100vh;
+  color: white;
+  font-family: Arial;
+  height: 100vh;
+}
+
+.menu {
+  background-color: white;
+}
+
+.menu ul {
+  display: flex; /* Vira coluna */
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+a {
+  color: tomato;
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  color: purple;
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
