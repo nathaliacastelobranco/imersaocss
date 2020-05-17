@@ -1,13 +1,55 @@
+/* soft reset for css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FrahRkEklgag%2Fmaxresdefault.jpg&f=1&nofb=1");
-  background-size: auto 100vh;
+  /* background-image: url(/img/background_freepik.jpg); */
+  background-color: rgb(21, 21, 37);
+  background-size: auto 100%;
   color: white;
-  font-family: Arial;
-  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; /*All tags preserves these font-size util someone tell another*/
+}
+
+/*Load these styles when the size screen is equal to 400px*/
+@media (min-width: 300px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Righteous", cursive;
+}
+
+nav.menu {
+  font-weight: 900;
 }
 
 .menu {
   background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
 }
 
 .menu ul {
@@ -19,8 +61,20 @@ body {
   list-style: none;
 }
 
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color 2s;
+}
+
+/* the hover class is essential to make this fade  */
+.menu a:hover {
+  background-color: rgb(21, 21, 37);
+  color: indianred;
+}
+
 a {
-  color: tomato;
+  color: midnightblue;
   text-decoration: none;
 }
 
@@ -29,8 +83,319 @@ a:hover {
   color: purple;
 }
 
+/* animations */
+.title {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+
+  animation: 1.5s ease 1s titleAnimation forwards;
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 .site-subtitle,
 .site-title {
   color: whitesmoke;
   text-align: center;
+}
+
+.site-title {
+  font-family: "Righteous", cursive;
+  font-size: 3em;
+}
+
+.sobre,
+.contato,
+.portfolio {
+  background-color: indianred;
+  padding: 2em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+/*------------------- FITA NO SUBTITLE --------*/
+
+@media (max-width: 499px) {
+  .site-subtitle .fita {
+    background: indianred;
+    position: relative;
+    margin: 5px auto;
+    width: 200px;
+    color: whitesmoke;
+    height: 1em;
+    font-weight: 700;
+    justify-content: center;
+  }
+
+  .fita .site-subtitle.conteudo {
+    padding: 6px;
+  }
+
+  .fita:before,
+  .fita:after {
+    content: "";
+    line-height: 0;
+    border-style: solid;
+    border-width: 20px;
+    position: absolute;
+    top: 10px;
+    z-index: -2000;
+    width: 5px;
+  }
+
+  .fita:before {
+    border-color: RGB(205, 80, 80) RGB(205, 80, 80) RGB(205, 80, 80) transparent;
+    left: -35px;
+  }
+
+  .fita:after {
+    border-color: RGB(205, 80, 80) transparent RGB(205, 80, 80) RGB(205, 80, 80);
+    right: -35px;
+  }
+
+  .conteudo:before,
+  .conteudo:after {
+    position: absolute;
+    content: "";
+    height: 0;
+    line-height: 1px;
+    border-style: solid;
+    border-width: 5px;
+    z-index: -1999;
+  }
+
+  .conteudo:before {
+    border-color: RGB(205, 62, 62) RGB(205, 62, 62) transparent transparent;
+    bottom: -10px;
+    left: 0;
+  }
+
+  .conteudo:after {
+    border-color: RGB(205, 62, 62) transparent transparent RGB(205, 62, 62);
+    bottom: -10px;
+    right: 0;
+  }
+}
+
+.fita {
+  background: indianred;
+  position: relative;
+  margin: 5px auto;
+  width: 280px;
+  color: whitesmoke;
+  height: 40px;
+  font-weight: 700;
+}
+
+.fita:before,
+.fita:after {
+  content: "";
+  line-height: 0;
+  border-style: solid;
+  border-width: 20px;
+  position: absolute;
+  top: 10px;
+  z-index: -2000;
+  width: 5px;
+}
+
+.fita:before {
+  border-color: RGB(205, 80, 80) RGB(205, 80, 80) RGB(205, 80, 80) transparent;
+  left: -35px;
+}
+
+.fita:after {
+  border-color: RGB(205, 80, 80) transparent RGB(205, 80, 80) RGB(205, 80, 80);
+  right: -35px;
+}
+
+.conteudo:before,
+.conteudo:after {
+  position: absolute;
+  content: "";
+  height: 0;
+  line-height: 1px;
+  border-style: solid;
+  border-width: 5px;
+  z-index: -1999;
+}
+
+.conteudo:before {
+  border-color: RGB(205, 62, 62) RGB(205, 62, 62) transparent transparent;
+  bottom: -10px;
+  left: 0;
+}
+
+.conteudo:after {
+  border-color: RGB(205, 62, 62) transparent transparent RGB(205, 62, 62);
+  bottom: -10px;
+  right: 0;
+}
+
+/* ---------- FIM DA FITA -----------------*/
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.sobre p {
+  color: whitesmoke;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: rgb(255, 255, 255);
+}
+
+.sobre a:hover {
+  color: rgb(250, 134, 153);
+}
+
+.sobre .avatar {
+  border-radius: 50%;
+}
+
+@media (min-width: 300px) {
+  .sobre .avatar {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar {
+    float: right;
+    margin-left: 1em;
+    border-radius: 50%;
+    /* gap: none; quero tirar o espaço abaixo da foto  */
+  }
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 3em;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 250px);
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 250px);
+    align-content: center;
+    justify-content: center;
+    min-height: calc(100vh - 48px - 8em);
+  }
+}
+
+@media (min-width: 1250px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(4, 250px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 250px;
+  width: 250px;
+  object-fit: cover; /* adjust image */
+  border-radius: 2px;
+  /* object-position: bottom; */
+  transition: transform 700ms;
+}
+
+.flip-card,
+figurecaption {
+  font-weight: 500;
+}
+
+.card-back {
+  text-align: center;
+  height: 10em;
+  position: relative;
+}
+
+.card-back .card-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.flip-card {
+  perspective: 900px;
+  height: 250px;
+  width: 250px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.card-back {
+  background-color: rgb(21, 21, 37);
+  height: 250px;
+  width: 250px;
+  transform: rotateY(180deg);
+}
+
+.contato .icons {
+  text-align: center;
+}
+.contato a {
+  color: whitesmoke;
+  font-size: 2.5em;
+}
+
+.contato a:active, /*the click moment - for devices*/
+.contato a:hover {
+  color: whitesmoke;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }

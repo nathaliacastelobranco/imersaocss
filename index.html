@@ -2,20 +2,162 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Responsive HTML -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nathalia Castelo Branco</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;700;800&family=Righteous&display=swap&family=Roboto:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4847d1f999.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <nav class="menu">
-        <ul>
+        <ul class="container">
           <li><a href="#">Sobre</a></li>
-          <li><a href="#">Portfólio</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#portfolio">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <h1 class="site-title">Nathalia Castelo Branco</h1>
-      <h2 class="site-subtitle">front-end development test</h2>
+      <div class="title">
+        <h1 class="site-title">Nathalia Castelo Branco</h1>
+        <div class="fita">
+          <h2 class="site-subtitle conteudo">Engenheira | Dev jr.</h2>
+        </div>
+      </div>
     </header>
+
+    <section class="sobre container">
+      <h2>Sobre</h2>
+      <figure>
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C4D03AQFrEF3ad44OCA/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=B_1ivjQ88kFmfrqyVK1t2DFU30toqYiwQNv9HdC1LmI"
+          alt="Nathalia Castelo Branco"
+          class="avatar"
+        />
+        <p>
+          Heeey, obrigada pelo interesse em meu portfólio! Este site encontra-se
+          atualmente em construção, aos poucos ele vai ficar lindo (volte sempre
+          para acompanhar a evolução!).
+        </p>
+
+        <p>
+          Sou engenheira civil pela UVA e mestranda também em engenharia civil
+          pela UERJ. Atuo como professora particular de concreto armado e estou
+          me aventurando pelo mundo do desenvolvimento web.
+        </p>
+
+        <p>
+          Neste portfólio (ou site, como quiser chamar) você vai encontrar meus
+          projetos e pesquisas tanto de engenharia quanto de desenvolvimento
+          web. E também tem material de estudo para ajudar meus alunos!
+        </p>
+
+        <p>
+          Ah, e bom lembrar que esse site foi construído durante a
+          <a href="https://www.alura.com.br/imersao-css">Imersão CSS Alura!</a>
+        </p>
+      </figure>
+    </section>
+
+    <!-- Seção Projetos  -->
+    <section class="portfolio container" id="portfolio">
+      <h2>Projetos</h2>
+
+      <div class="grid">
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="https://image.freepik.com/free-vector/space-tour-illustration_153233-85.jpg"
+                alt="Projetos dev"
+              />
+              <figcaption>Projetos dev</figcaption>
+            </figure>
+            <div class="card-back">
+              <span class="card-text">Projetos de desenvolvimento web</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="https://image.freepik.com/free-vector/astronout-rocket-illustration_56972-65.jpg"
+                alt="Exercícios propostos"
+              />
+              <figcaption>Exercícios propostos</figcaption>
+            </figure>
+            <div class="card-back">
+              <span class="card-text"
+                >Exercícios de autoria própria ou da internet</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="https://image.freepik.com/free-vector/illustration-astronaut-cosmonaut-paying-skateboard-sport-space-with-astronaut-suit_27575-3.jpg"
+                alt="Aulas e resumos"
+              />
+              <figcaption>Aulas e resumos</figcaption>
+            </figure>
+            <div class="card-back">
+              <span class="card-text">Material de apoio aos estudos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img
+                class="img-portfolio"
+                src="https://image.freepik.com/free-vector/astrodunk_72373-1.jpg"
+                alt="Pesquisa"
+              />
+              <figcaption>Pesquisa</figcaption>
+            </figure>
+            <div class="card-back">
+              <span class="card-text">Pesquisas em que estou envolvida</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contatos -->
+    <section class="contato container" id="contato">
+      <h2>Contato</h2>
+
+      <div class="grid icons">
+        <a href="https://www.instagram.com/nathaliacb.eng/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="www.linkedin.com/in/nathalia-de-almeida-castelo-branco"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/nathaliacastelobranco" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="mailto:nathaliaacbranco@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </section>
   </body>
 </html>
