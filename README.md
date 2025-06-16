@@ -1,8 +1,8 @@
 # Imersão CSS - Criação de site estático
 
-Este site estático foi desenvolvido durante a Imersão CSS da Alura. 
+Este site estático foi desenvolvido durante a Imersão CSS da Alura em 2020 😄. 
 
-O link para acesso é http://nathb.me/imersaocss/
+[Acesse aqui](https://nathaliacastelobranco.github.io/imersaocss/) a página publicada.
 
 ### Tecnologias
 
